@@ -5,9 +5,11 @@ import pickle
 import os
 
 # Load the pre-trained model and tokenizer
-model = tf.keras.models.load_model('model.keras')
+model_path = os.path.join('model.keras')
+model = tf.keras.models.load_model(model_path)
 
-tokenizer = pickle.load(open('tokenizer.pickle', 'rb'))
+tokenizer_path = os.path.join('tokenizer.pickle')
+tokenizer = pickle.load(open(tokenizer_path, 'rb'))
 
 # Preprocess user input text
 def preprocess_text(text):
