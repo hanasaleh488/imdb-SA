@@ -7,8 +7,7 @@ import os
 # Load the pre-trained model and tokenizer
 model = tf.keras.models.load_model('model.keras')
 
-tokenizer_path = os.path.join('models', 'tokenizer.pickle')
-tokenizer = pickle.load(open(tokenizer_path, 'rb'))
+tokenizer = pickle.load(open('tokenizer.pickle', 'rb'))
 
 # Preprocess user input text
 def preprocess_text(text):
