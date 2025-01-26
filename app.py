@@ -5,8 +5,7 @@ import pickle
 import os
 
 # Load the pre-trained model and tokenizer
-model_path = os.path.join('models', 'model.keras')
-model = tf.keras.models.load_model(model_path)
+model = tf.keras.models.load_model('model.keras')
 
 tokenizer_path = os.path.join('models', 'tokenizer.pickle')
 tokenizer = pickle.load(open(tokenizer_path, 'rb'))
